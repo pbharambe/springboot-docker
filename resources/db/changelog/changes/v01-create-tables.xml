@@ -11,12 +11,12 @@
             <column name="id" type="NUMBER(15)"/>
             <column name="first_name" type="VARCHAR2(255)"/>
             <column name="last_name" type="VARCHAR2(255)"/>
-            <column name="email_address" type="VARCHAR2(255)"/>
+                <column name="email_address" type="VARCHAR2(255)"/>
         </createTable>
     </changeSet>
 
     <changeSet author="lb-generated"  id="1185214997195-2">
-        <insert  catalogName="liquibase_demo"
+        <insert  catalogName="postgres"
                  dbms="postgresql"
                  schemaName="public"
                  tableName="employees">
@@ -26,6 +26,40 @@
             <column  name="email_address"  value="test@test.com"/>
         </insert>
     </changeSet>
+
+    <changeSet author="lb-generated"  id="1185214997195-3">
+        <insert  catalogName="postgres"
+                 dbms="postgresql"
+                 schemaName="public"
+                 tableName="employees">
+            <column  name="id"  value="2"/>
+            <column  name="first_name"  value="user2"/>
+            <column  name="last_name"  value="user2"/>
+            <column  name="email_address"  value="test@test.com"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="lb-generated"  id="1185214997195-4">
+        <insert  catalogName="postgres"
+                 dbms="postgresql"
+                 schemaName="public"
+                 tableName="employees">
+            <column  name="id"  value="3"/>
+            <column  name="first_name"  value="user3"/>
+            <column  name="last_name"  value="user3"/>
+            <column  name="email_address"  value="test@test.com"/>
+        </insert>
+    </changeSet>
+
+    <!--<changeSet author="lb-generated" id="1185214997195-15">
+        <sqlFile dbms="postgresql"
+                 encoding="UTF-8"
+                 endDelimiter="\nGO"
+                 path="insert-employee.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+    </changeSet>-->
 
 
 </databaseChangeLog>
